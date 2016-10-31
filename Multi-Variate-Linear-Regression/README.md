@@ -1,10 +1,10 @@
 #MULTIVARIATE LINEAR REGRESSION
 
-Dependencies : 
+Requirements : 
 	1. numpy
  	2. matplotlib
 
-CLASS MultiVariate() ->
+Class MultiVariate():
 
 	ROUTINES ->
  
@@ -22,7 +22,9 @@ CLASS MultiVariate() ->
 			alpha -> Learning_Rate
 			n1    -> no of training features
 			n2    -> no of testing features
-	4. plot(f) : Plots the hypotesis pedictions of the test set along with a scatter plot of the actual test set values
+
+	4. plot(f) : Plots the hypotesis pedictions of the test set along with a scatter
+		     plot of the actual test set values
 			# Arguments
 				f -> feature to plot against 
 
