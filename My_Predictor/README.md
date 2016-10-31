@@ -11,15 +11,21 @@ Class Predictor() :
 	
 
 	Routines ->
-		0. __init__(): [Constructor] 
+		0. __init__(classes,features,data): [Constructor] 
+
 			# Arguments	
 			classes : List all classes
 			features : List all features
 			data : array of  dictionary of dictionary 
+
 		1. calcNoOfDataSets() : Does as the name suggests. Used internally
+
 		2. dataMeanCalc() : calculates mean of all the features of every class
+
 		3. classPredictor() : Predicts which class input test casr belongs to
+
 		4. predictorAccuracy() : Just calculates the accuracy 
+
 		5. printDataPredictAcc() : Same as Routine 1
 		
 		
