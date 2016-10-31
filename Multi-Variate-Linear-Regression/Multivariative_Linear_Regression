@@ -1,3 +1,5 @@
+""" Impementation Of Multi_Varative Linear Regression using gradient Descent  """
+
 import numpy as np
 from numpy import genfromtxt
 from statistics import stdev
