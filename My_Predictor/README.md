@@ -3,9 +3,10 @@
 Requirements:
 	- A PC running python :)
 
-- I take full credit for the code ! 
+- I take full credit for the code !
 - This Predicton Models Uses means of different features of different class to predict which class an input test case belongs to
 - Displays Accuracy on the data set
+- The simplicity of this code
 
 Class Predictor() :
 	
