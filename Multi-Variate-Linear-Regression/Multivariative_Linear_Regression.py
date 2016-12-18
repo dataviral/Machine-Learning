@@ -29,7 +29,6 @@ class MultiVariate():
                 
     def randomize(self):
         z = np.concatenate((self.features, self.values), axis =1)
-        print(self.features[0,:])
         np.random.shuffle(z)
         self.features, self.values = z[:,:-1], z[:,-1:]
 
@@ -53,7 +52,6 @@ class MultiVariate():
         
         r = np.dot(self.features_test, self.theta)
         
-        slope, intercept = np.polyfit(self.features_train[:,f],self.values_train, 1)
         abline_values = [self.theta[f] * i + self.theta[0] for i in self.features_test[:,f] ]
 
         plt.close()
@@ -76,7 +74,8 @@ features, values = data[:,:-1], data[:,-1:]
 
 clf = MultiVariate(features, values)
 [theta, means, stdevs ] = clf.train(.01, 37, 10, 400) # learning rate, no of training features, no of testing features
-clf.plot(1)
+clf.plot(1) #plot first feature
+
 #predicting prices for a 1400 sq-ft 4 BHK house
 r = clf.predict([ 1, (1400-means[0])/stdevs[0], (4-means[1])/stdevs[1]])
-print(r)
+print("Housing Prices for a 1400 sq-ft 4 BHK house is:",r[0])

@@ -1,4 +1,6 @@
 #MULTIVARIATE LINEAR REGRESSION
+Python Implementation of ML Coursera Course 
+With Visualisation of the Fit
 
 Requirements : 
 	1. numpy
