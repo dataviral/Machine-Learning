@@ -1,11 +1,41 @@
-#MULTIVARIATE LINEAR REGRESSION
-Python Implementation of ML Coursera Course 
-With Visualisation of the Fit
+<html>
+<head>
 
+<style>
+body{
+font-family: Lato, "Open Sans";
+}
+
+h1{
+	color: blue;
+}
+
+p{
+	color: #FF7F00;
+}
+
+
+div{
+
+	color: gray;
+}
+
+</style>
+
+</head>
+<body>
+<h1>MULTIVARIATE LINEAR REGRESSION<h1>
+<p id = "main">
+Python Implementation of MULTIVARIATE LINEAR REGRESSION Classifier
+Learning Algorithm --> Gradient Descent
+With Visualisation of the Fit
+</p>
+<div id="req">
 Requirements : 
 	1. numpy
  	2. matplotlib
-
+</div>
+<div id="class">
 Class MultiVariate():
 
 	ROUTINES :
@@ -17,11 +47,12 @@ Class MultiVariate():
 	2. randomize(self) :
 		randomizes the features 
         
-	3. train(self, alpha, n1, n2) :
+	3. train(self, alpha,lamb, n1, n2) :
 		Performs Gradient Descent and fits our linear hypothesis model to the training set
 	
 		# Arguments					
 			alpha -> Learning_Rate
+			lamb -> Regularization Parameter
 			n1    -> no of training features
 			n2    -> no of testing features
 
@@ -32,4 +63,6 @@ Class MultiVariate():
 	5. predict(self, ft) : Predict for a test-set
 			# Arguments
 				ft -> test-set
-
+</div>
+</body>
+</html>

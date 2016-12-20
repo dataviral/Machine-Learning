@@ -32,7 +32,7 @@ class MultiVariate():
         np.random.shuffle(z)
         self.features, self.values = z[:,:-1], z[:,-1:]
 
-    def train(self, alpha = .1, n1 = 10, n2 = 10, iterations = 400):
+    def train(self, alpha = .1,lamb =0, n1 = 10, n2 = 10, iterations = 400):
         
         self.features_train = self.features[:n1,:]
         self.features_test = self.features[-n2:,:]
@@ -44,7 +44,10 @@ class MultiVariate():
         for l in range(iterations):
                 h = np.dot(self.features_train, theta)
                 for j in range(len(theta)):
+                    if j==0:
                         theta[j] = theta[j] - alpha * (1/m) * sum(np.multiply((h -self.values_train), self.features_train[:,j:j+1]))[0]
+                    else:
+                        theta[j] = theta[j]*(1- alpha*lamb/m) - alpha * (1/m) * sum(np.multiply((h -self.values_train), self.features_train[:,j:j+1]))[0]
         self.theta = theta
         return [theta,self.means,self.stdevs];
             
@@ -73,7 +76,7 @@ data = genfromtxt('linear_regression_data4.txt', delimiter=",")
 features, values = data[:,:-1], data[:,-1:]
 
 clf = MultiVariate(features, values)
-[theta, means, stdevs ] = clf.train(.01, 37, 10, 400) # learning rate, no of training features, no of testing features
+[theta, means, stdevs ] = clf.train(.01,0.5, 37, 10, 400) # learning rate, no of training features, no of testing features
 clf.plot(1) #plot first feature
 
 #predicting prices for a 1400 sq-ft 4 BHK house
