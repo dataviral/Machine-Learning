@@ -1,41 +1,14 @@
-<html>
-<head>
 
-<style>
-body{
-font-family: Lato, "Open Sans";
-}
-
-h1{
-	color: blue;
-}
-
-p{
-	color: #FF7F00;
-}
-
-
-div{
-
-	color: gray;
-}
-
-</style>
-
-</head>
-<body>
 <h1>MULTIVARIATE LINEAR REGRESSION<h1>
-<p id = "main">
+
 Python Implementation of MULTIVARIATE LINEAR REGRESSION Classifier
 Learning Algorithm --> Gradient Descent
 With Visualisation of the Fit
-</p>
-<div id="req">
+
 Requirements : 
 	1. numpy
  	2. matplotlib
-</div>
-<div id="class">
+
 Class MultiVariate():
 
 	ROUTINES :
@@ -63,6 +36,4 @@ Class MultiVariate():
 	5. predict(self, ft) : Predict for a test-set
 			# Arguments
 				ft -> test-set
-</div>
-</body>
-</html>
+
