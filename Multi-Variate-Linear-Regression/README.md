@@ -1,5 +1,5 @@
 
-<h1>MULTIVARIATE LINEAR REGRESSION<h1>
+<h1>MULTIVARIATE LINEAR REGRESSION</h1>
 
 Python Implementation of MULTIVARIATE LINEAR REGRESSION Classifier
 Learning Algorithm --> Gradient Descent
